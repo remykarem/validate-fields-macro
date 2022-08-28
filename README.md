@@ -1,6 +1,6 @@
 # Validate fields macro
 
-Compile-time checks to validate struct fields against configurations in `application.yml`. Not to be used in production!
+Compile-time checks in Rust to validate struct fields against configurations in `application.yml`. Not to be used in production!
 
 * Checks if a struct property exists in the YAML file
 * Checks if a YAML mapping exists in the struct
@@ -9,12 +9,24 @@ Compile-time checks to validate struct fields against configurations in `applica
 
 Based on https://tinkering.xyz/introduction-to-proc-macros.
 
+---
+
+## Install
+
 Add the following in `Cargo.toml`.
 
 ```bash
 [dependencies]
 validate_fields_macro = { git = "https://github.com/remykarem/validate-fields-macro" }
 ```
+
+We are using the `proc_macro_diagnostic` feature, which is only available via the `nightly` release channel. Create a file named `rust-toolchain` and add the following:
+
+```txt
+nightly
+```
+
+## Usage
 
 Define `application.yml`.
 
