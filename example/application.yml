@@ -1,0 +1,7 @@
+person:
+  name: me
+  age: 30
+
+credentials:
+  private_key: this_is_some_private_key
+  public_key: this_is_some_public_key
